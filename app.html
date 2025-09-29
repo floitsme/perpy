@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perpy — App (Perpetual Trading)</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .appbar{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid #171c2c;background:#0e1420;position:sticky;top:0;z-index:5}
+    .appbar img{width:22px;height:22px}
+    .appgrid{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:12px;margin-top:12px}
+    .panel{background:#0e1426;border:1px solid #1a2036;border-radius:12px;overflow:hidden}
+    .panel h4{margin:0;padding:10px 12px;border-bottom:1px solid #1a2036;background:#101630}
+    .chartbox{position:relative}
+    .chartbox img{width:100%;display:block;opacity:.98}
+    .orderform{padding:12px}
+    .row{display:flex;gap:10px;margin:8px 0}
+    .btn{padding:10px 12px;border-radius:10px;border:1px solid #2b375f;background:#141b33;cursor:pointer}
+    .btn.primary{background:linear-gradient(180deg,#1c2544,#141b33)}
+    .stat{padding:8px 12px;border-top:1px solid #1a2036;color:#a0a7b7;font-size:14px}
+    @media(max-width:1000px){.appgrid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="appbar container">
+    <a href="./" title="Back to Home"><img src="assets/A_vector_logo_design_features_a_single_stylized_le.png" alt="Perpy"></a>
+    <strong>Perpy</strong>
+    <span style="color:#a0a7b7">• Perpetual Trading (Demo UI)</span>
+    <div style="margin-left:auto;display:flex;gap:8px">
+      <a class="btn" href="resources.html">Whitepaper</a>
+      <a class="btn primary" href="https://pump.fun/" target="_blank" rel="noopener">Buy Perpy</a>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="appgrid">
+      <div class="panel chartbox">
+        <h4>ETH‑PERP • Chart</h4>
+        <img src="assets/3d56e4ec-1921-4763-994b-bf1fe711674e.png" alt="Chart Mock">
+        <div style="position:absolute;left:16px;top:52px;display:flex;gap:10px;align-items:center;background:rgba(11,14,20,.55);padding:8px 10px;border-radius:10px;border:1px solid #1a2036;">
+          <img src="assets/A_vector_logo_design_features_a_single_stylized_le.png" alt="Perpy" style="width:20px;height:20px">
+          <strong>Perpy</strong>
+        </div>
+      </div>
+      <div class="panel">
+        <h4>Order Book</h4>
+        <div class="stat">Spread: 0.01% • Depth: 50k</div>
+        <div class="stat">Best Bid/Ask shown on mock preview</div>
+      </div>
+      <div class="panel">
+        <h4>Trade</h4>
+        <div class="orderform">
+          <div class="row"><input style="flex:1;padding:10px;border-radius:8px;border:1px solid #1a2036;background:#0b0f1f;color:#e6e8ee" placeholder="Amount (ETH)" /></div>
+          <div class="row"><input style="flex:1;padding:10px;border-radius:8px;border:1px solid #1a2036;background:#0b0f1f;color:#e6e8ee" placeholder="Leverage (x)" /></div>
+          <div class="row">
+            <button class="btn primary" style="flex:1">Buy / Long</button>
+            <button class="btn" style="flex:1">Sell / Short</button>
+          </div>
+          <div class="stat">Fees: Maker 0% • Taker 0%</div>
+          <div class="stat">Contract Address: <b>Will Be Updated</b></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
